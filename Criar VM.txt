@@ -1,0 +1,14 @@
+az vm create \
+  --resource-group rg-mottu \
+  --name vm-mottu \
+  --image Canonical:0001-com-ubuntu-server-jammy:22_04-lts:latest \
+  --size Standard_B2s \
+  --admin-username admlnx \
+  --admin-password 'fiap@2tdsvms' \
+  --authentication-type password \
+  --os-disk-size-gb 64 \
+  --storage-sku Premium_LRS \
+  --location brazilsouth \
+  --public-ip-address-dns-name vm-challenge-dns \
+  --nic-delete-option Delete \
+  --os-disk-delete-option Delete
